@@ -1,0 +1,96 @@
+<div class="container">
+  <h1>Configurações do Back-end</h1>
+
+  <div class="form-group">
+    <label for="jwksUri">JWKsUri:</label>
+    <input type="text" [(ngModel)]="jwksUri" id="jwksUri" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="port">PORTA:</label>
+    <input type="text" [(ngModel)]="port" id="port" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabaseId">ID do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabaseId" id="tenantDatabaseId" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabaseType">Tipo do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabaseType" id="tenantDatabaseType" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabaseName">Nome do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabaseName" id="tenantDatabaseName" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabaseUsername">Usuário do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabaseUsername" id="tenantDatabaseUsername" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabasePassword">Senha do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabasePassword" id="tenantDatabasePassword" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabaseHost">Host do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabaseHost" id="tenantDatabaseHost" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabasePort">Porta do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabasePort" id="tenantDatabasePort" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="tenantDatabaseConfig">Configuração do Banco de Dados do Tenant:</label>
+    <input type="text" [(ngModel)]="tenantDatabaseConfig" id="tenantDatabaseConfig" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="encryptionKeyTenantPassword">Chave de Criptografia da Senha do Tenant:</label>
+    <input type="text" [(ngModel)]="encryptionKeyTenantPassword" id="encryptionKeyTenantPassword" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabaseType">Tipo de Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabaseType" id="defaultDatabaseType" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabaseName">Nome do Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabaseName" id="defaultDatabaseName" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabaseUsername">Usuário do Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabaseUsername" id="defaultDatabaseUsername" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabasePassword">Senha do Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabasePassword" id="defaultDatabasePassword" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabaseHost">Host do Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabaseHost" id="defaultDatabaseHost" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabasePort">Porta do Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabasePort" id="defaultDatabasePort" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="defaultDatabaseConfig">Configuração do Banco de Dados Padrão:</label>
+    <input type="text" [(ngModel)]="defaultDatabaseConfig" id="defaultDatabaseConfig" class="form-control" />
+  </div>
+
+  <!-- Botão para salvar e redirecionar -->
+  <button (click)="saveBackConfigToLocalStorage()" class="btn btn-success mt-3">Salvar Configuração do Back-end</button>
+</div>

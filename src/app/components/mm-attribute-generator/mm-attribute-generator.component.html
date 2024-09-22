@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Gerar Atributos para {{ className }}</h1>
+
+  <!-- Pergunta quantos atributos deseja gerar -->
+  <div class="form-group">
+    <label for="numAttributes">Digite o número de atributos:</label>
+    <input type="number" [(ngModel)]="numAttributes" (ngModelChange)="generateAttributeFields()" min="1" class="form-control" id="numAttributes" />
+  </div>
+
+  <!-- Campos para os atributos -->
+  <div *ngIf="attributes.length > 0">
+    <div *ngFor="let attr of attributes; let i = index" class="form-group mt-3">
+      <label for="attributeName{{i}}">Nome do Atributo {{i + 1}}:</label>
+      <input type="text" [(ngModel)]="attr.name" (ngModelChange)="saveAttributes()" id="attributeName{{i}}" class="form-control" />
+
+      <label for="attributeType{{i}}">Tipo do Atributo {{i + 1}}:</label>
+      <input type="text" [(ngModel)]="attr.type" (ngModelChange)="saveAttributes()" id="attributeType{{i}}" class="form-control" />
+
+      <label for="attributeIcon{{i}}">Ícone do Atributo {{i + 1}}:</label>
+      <select [(ngModel)]="attr.icon" (ngModelChange)="saveAttributes()" id="attributeIcon{{i}}" class="form-control">
+        <option *ngFor="let icon of availableIcons" [value]="icon.value">{{icon.label}}</option>
+      </select>
+
+      <!-- Botão para configurar os atributos -->
+      <button (click)="addAttributeSettings(i)" class="btn btn-secondary mt-2">Configurar Atributo {{i + 1}}</button>
+    </div>
+  </div>
+
+  <!-- Botão para salvar e redirecionar para a página de classes -->
+  <button (click)="saveAndRedirect()" class="btn btn-success mt-3">Salvar e Voltar</button>
+</div>

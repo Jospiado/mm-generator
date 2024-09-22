@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Configuração Principal</h1>
+  
+  <!-- Botão para redirecionar para as configurações do projeto -->
+  <button (click)="goToProjectSettings()" class="btn btn-secondary mt-3">Ir para Configurações do Projeto</button>
+
+  <!-- Botão para gerar e baixar o arquivo .mm -->
+  <button (click)="generateMMFile()" class="btn btn-success mt-3">Baixar Arquivo Main Config .mm</button>
+
+  <!-- Botão para redirecionar para a criação de classes -->
+  <button (click)="goToClassCreation()" class="btn btn-primary mt-3">Ir para Criação de Classes</button>
+
+  <!-- Botão para abrir o modal de instruções -->
+  <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#instructionsModal">
+    Instruções
+  </button>
+
+  <!-- Incluir o componente do modal -->
+  <app-instructions-modal></app-instructions-modal>
+
+  <!-- Feedback visual após geração do arquivo -->
+  <div *ngIf="fileGenerated" class="alert alert-success mt-3" role="alert">
+    O arquivo foi gerado e baixado com sucesso!
+  </div>
+</div>

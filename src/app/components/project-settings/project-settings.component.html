@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Configurações do Projeto</h1>
+
+  <!-- Formulário para preencher os dados -->
+  <div class="form-group">
+    <label for="nomeProjeto">Nome do Projeto:</label>
+    <input type="text" [(ngModel)]="nomeProjeto" id="nomeProjeto" class="form-control" placeholder="Digite o nome do projeto" />
+  </div>
+
+  <div class="form-group">
+    <label for="backPath">Caminho do Back-end:</label>
+    <input type="text" [(ngModel)]="backPath" id="backPath" class="form-control" placeholder="Digite o caminho do back-end" />
+  </div>
+
+  <div class="form-group">
+    <label for="frontPath">Caminho do Front-end:</label>
+    <input type="text" [(ngModel)]="frontPath" id="frontPath" class="form-control" placeholder="Digite o caminho do front-end" />
+  </div>
+
+  <!-- Botão para redirecionar para a configuração do back-end -->
+  <button (click)="goToBackConfig()" class="btn btn-secondary mt-3">Configurar Back-end (env)</button>
+
+  <!-- Botão para redirecionar para a configuração do front-end -->
+  <button (click)="goToFrontConfig()" class="btn btn-secondary mt-3 ml-2">Configurar Front-end (env)</button>
+
+  <!-- Botão para salvar e redirecionar -->
+  <button (click)="saveProjectSettings()" class="btn btn-success mt-3">Salvar Configurações do Projeto</button>
+</div>

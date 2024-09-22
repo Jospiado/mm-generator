@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Configurar Classe: {{ className }}</h1>
+
+  <div class="form-group">
+    <label for="table">Tabela</label>
+    <input type="text" id="table" [(ngModel)]="config.table" class="form-control" placeholder="Digite o nome da tabela" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Descrição</label>
+    <input type="text" id="description" [(ngModel)]="config.description" class="form-control" placeholder="Digite a descrição" />
+  </div>
+
+  <div class="form-group">
+    <label for="apiUrl">URL da API</label>
+    <input type="text" id="apiUrl" [(ngModel)]="config.apiUrl" class="form-control" placeholder="Digite a URL da API" />
+  </div>
+
+  <div class="form-group">
+    <label for="ptBr">Título (pt-br)</label>
+    <input type="text" id="ptBr" [(ngModel)]="config.ptBr" class="form-control" placeholder="Digite o título (pt-br)" />
+  </div>
+
+  <div class="form-group">
+    <label for="en">Título (en)</label>
+    <input type="text" id="en" [(ngModel)]="config.en" class="form-control" placeholder="Digite o título (en)" />
+  </div>
+
+  <div class="form-group">
+    <label for="frontPath">Caminho do Front</label>
+    <input type="text" id="frontPath" [(ngModel)]="config.frontPath" class="form-control" placeholder="Digite o caminho do front" />
+  </div>
+
+  <div class="form-group">
+    <label for="searchable">Pesquisável</label>
+    <input type="text" id="searchable" [(ngModel)]="config.searchable" class="form-control" placeholder="Digite se é pesquisável" />
+  </div>
+
+  <!-- Botão para salvar as configurações -->
+  <button (click)="saveConfig()" class="btn btn-success mt-3">Salvar Configuração</button>
+</div>

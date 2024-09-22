@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Gerar Classes</h1>
+
+  <!-- Input para definir o número de classes -->
+  <div class="form-group">
+    <label for="numClasses">Digite o número de classes:</label>
+    <input type="number" [(ngModel)]="numClasses" min="1" class="form-control" id="numClasses" />
+    <button (click)="generateClassInputs()" class="btn btn-primary mt-2">Gerar Campos</button>
+  </div>
+
+  <!-- Campos dinâmicos para os nomes das classes -->
+  <div *ngIf="classes.length > 0">
+    <div *ngFor="let classObj of classes; let i = index" class="form-group mt-3">
+      <label for="className{{i}}">Nome da Classe {{i + 1}}:</label>
+      <input type="text" [(ngModel)]="classObj.name" id="className{{i}}" class="form-control" />
+
+      <!-- Botões para adicionar configurações e atributos -->
+      <div class="mt-2">
+        <button (click)="addClassConfig(i)" class="btn btn-secondary">Adicionar Configurações</button>
+        <button (click)="addClassAttributes(i)" class="btn btn-secondary ml-2">Adicionar Atributos</button>
+      </div>
+    </div>
+
+    <!-- Exibição das mensagens de status -->
+    <div *ngIf="filledStatusMessages.length > 0" class="alert alert-info mt-3">
+      <ul>
+        <li *ngFor="let message of filledStatusMessages">{{ message }}</li>
+      </ul>
+    </div>
+
+    <!-- Botão para salvar as classes -->
+    <button (click)="saveClasses()" class="btn btn-success mt-3">Salvar Classes</button>
+  </div>
+</div>

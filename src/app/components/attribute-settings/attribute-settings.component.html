@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Configurações de Atributo para {{ attributeIndex + 1 }}</h1>
+
+  <!-- Formulário para preencher os dados -->
+  <div class="form-group">
+    <label for="columnName">Nome da Coluna:</label>
+    <input type="text" [(ngModel)]="settings.columnName" id="columnName" class="form-control" placeholder="Digite o nome da coluna" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Descrição:</label>
+    <input type="text" [(ngModel)]="settings.description" id="description" class="form-control" placeholder="Digite a descrição" />
+  </div>
+
+  <div class="form-group">
+    <label for="titlePtBr">Título (pt-br):</label>
+    <input type="text" [(ngModel)]="settings.titlePtBr" id="titlePtBr" class="form-control" placeholder="Digite o título em pt-br" />
+  </div>
+
+  <div class="form-group">
+    <label for="titleEn">Título (en):</label>
+    <input type="text" [(ngModel)]="settings.titleEn" id="titleEn" class="form-control" placeholder="Digite o título em inglês" />
+  </div>
+
+  <!-- Checkbox para "required" -->
+  <div class="form-check mt-2">
+    <input type="checkbox" class="form-check-input" id="required" [(ngModel)]="settings.required">
+    <label class="form-check-label" for="required">Obrigatório</label>
+  </div>
+
+  <!-- Botão para salvar -->
+  <button (click)="saveSettings()" class="btn btn-success mt-3">Salvar Configurações</button>
+</div>
